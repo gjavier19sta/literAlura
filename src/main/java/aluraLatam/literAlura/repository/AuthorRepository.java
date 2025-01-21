@@ -15,10 +15,10 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
     Optional<Author> findAuthorByName(String name);
 
 
-    @Query("SELECT a FROM authors a LEFT  JOIN  FETCH  a.books")
+    @Query("SELECT a FROM Author a LEFT  JOIN  FETCH  a.books")
     List<Author> findAllConBooks();
 
-    @Query("SELECT  a FROM  authors a LEFT  JOIN  fetch a.books WHERE (a.fallecimiento IS NULL OR a.nacimiento > :year) AND a.nacimiento <= :year ")
+    @Query("SELECT  a FROM  Author a LEFT  JOIN  fetch a.books WHERE (a.fallecimiento IS NULL OR a.nacimiento > :year) AND a.nacimiento <= :year ")
     List<Author> findAuthorVivosEnElYear(@Param( "year") int year);
 
 

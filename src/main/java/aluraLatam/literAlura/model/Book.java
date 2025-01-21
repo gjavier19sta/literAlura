@@ -3,7 +3,7 @@ package aluraLatam.literAlura.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "books")
+@Table(name = "Book")
 public class Book {
 
     @Id

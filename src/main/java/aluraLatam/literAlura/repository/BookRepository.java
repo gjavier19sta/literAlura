@@ -15,7 +15,7 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     Optional<Book> findByTitleIgnoreCase (String Title);
 
-    @Query("SELECT b FROM books b WHERE b.idioma = :idioma")
+    @Query("SELECT b FROM Book b WHERE b.idioma = :idioma")
     List<Book> findByIdioma(@Param("idioma") String idioma);
 
 //    List<Book> findByAuthors(@Param("authors") Author author);

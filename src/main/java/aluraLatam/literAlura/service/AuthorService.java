@@ -31,7 +31,7 @@ public class AuthorService {
         return authorRepository.findById(id);
     }
 
-    public Optional<Author> findAuthorByName (String name){
+    public Optional<Author> encontrarAuthorByName(String name){
         return authorRepository.findAuthorByName(name);
     }
 

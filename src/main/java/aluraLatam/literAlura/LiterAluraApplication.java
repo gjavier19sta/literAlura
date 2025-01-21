@@ -20,6 +20,6 @@ public class LiterAluraApplication implements CommandLineRunner {
 	}
 	@Override
 	public void run(String... args) throws Exception {
-		principal.menu();
+		principal.mostrarMenu();
 	}
 }
